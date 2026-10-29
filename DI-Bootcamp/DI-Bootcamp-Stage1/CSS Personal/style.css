@@ -1,0 +1,51 @@
+/*Selector {
+    Property: value;
+    }*/
+    *{
+        text-align: right;
+    }
+    body {
+        background-image: url(https://i.pinimg.com/1200x/17/19/3e/17193e20d12a5bfc19a5ead45d30bcf3.jpg);
+        background-size: cover;
+    }
+    
+
+h2 {
+    color:#00927A ;
+    text-align: center;
+    border: 5px solid rgb(55, 179, 158, 0.5);
+    cursor: pointer;
+}
+
+p {
+    color: purple;
+    border: 5px solid rgb(55, 179, 158, 0.5);
+    font-size: 200%;
+}
+
+img {   
+    float: left;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    font-size: 200%;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+.webtext:first-child {
+    border: 5px dashed pink;   
+}
+.active {
+     color: green   
+}
+#div1{
+    background: rgb(255, 228, 196, 0.5);
+}
+#div2 {
+    background-color: rgb(196, 255, 207, 0.5);
+}

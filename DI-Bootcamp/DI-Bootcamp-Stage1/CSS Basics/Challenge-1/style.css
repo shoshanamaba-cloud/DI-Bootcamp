@@ -1,0 +1,23 @@
+div {
+    align-items: left;
+    background-color: #8cb2fc;
+    width: 800px;
+    padding: 8px;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+li::first-letter {
+    font-size: 2em;
+}

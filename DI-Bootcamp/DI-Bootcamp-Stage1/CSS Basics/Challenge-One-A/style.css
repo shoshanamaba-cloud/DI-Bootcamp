@@ -1,0 +1,32 @@
+body {
+    background-color: #d69153;
+}
+
+div {
+    background-color: #fae37c;
+    width: 900px;
+    margin: 0 auto;
+    border: 6px dashed #000;
+}
+p.h1{
+    text-align: center;
+    font-family: "bowlby one", cursive;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 20px;
+    border-bottom: 6px dashed #000;
+}
+
+p, ul {
+    padding: 20px;
+    font-family: "geist pixel", sans-serif;
+    margin: 0;
+}
+ ul {
+    text-align: center;
+    font-size: 1.2em;
+    ::first-letter {
+        font-size: 1.5em;
+    }
+    list-style-type: none;
+ }
