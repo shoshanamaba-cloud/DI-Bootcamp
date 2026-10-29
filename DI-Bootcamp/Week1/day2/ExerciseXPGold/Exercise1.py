@@ -1,0 +1,8 @@
+print("Hello world")
+print("Hello world")
+print("Hello world")
+print("Hello world")
+print("I love python")
+print("I love python")
+print("I love python")
+print("I love python")
