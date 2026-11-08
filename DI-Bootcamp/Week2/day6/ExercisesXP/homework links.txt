@@ -1,0 +1,7 @@
+https://github.com/shoshanamaba-cloud/DI-Bootcamp/blob/main/DI-Bootcamp/Week2/day6/ExercisesXP/Exercise-1.js
+https://github.com/shoshanamaba-cloud/DI-Bootcamp/blob/main/DI-Bootcamp/Week2/day6/ExercisesXP/Exercise-2.js
+https://github.com/shoshanamaba-cloud/DI-Bootcamp/blob/main/DI-Bootcamp/Week2/day6/ExercisesXP/Exercise-3.js
+https://github.com/shoshanamaba-cloud/DI-Bootcamp/blob/main/DI-Bootcamp/Week2/day6/ExercisesXP/Exercise-4.js
+https://github.com/shoshanamaba-cloud/DI-Bootcamp/blob/main/DI-Bootcamp/Week2/day6/ExercisesXP/Exercise-5.js
+https://github.com/shoshanamaba-cloud/DI-Bootcamp/blob/main/DI-Bootcamp/Week2/day6/ExercisesXP/Exercise-6.js
+https://github.com/shoshanamaba-cloud/DI-Bootcamp/blob/main/DI-Bootcamp/Week2/day6/ExercisesXP/Exercise-7.js
