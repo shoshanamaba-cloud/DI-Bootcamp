@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Hello World!</h1>
+    <div id="elem">
+        <div id="elem-content">My element</div>
+    </div>
+    <p class="my p"> <a href="htttps://google.com" target="_blank"></a> Lorem Ipsum</p>
+    <script>
+        //1. Let's slect h1 and change the background to red
+        let title = document.querySelector("h1");
+            title.style.backgroundColor = "red";  
+        //2. Let's select a in p and console.log the following:
+        let link = document.querySelector("p a");
+        //2.1 How many attributes it has
+        console.log(link.attributes.length);
+        //2.2 The value of href
+        console.log(link.getAttribute("href"));
+        //2.3 The value of target
+        console.log(link.getAttribute("target"));
+        //3. Let's select all divs 
+        let divs = document.querySelectorAll("div");
+        //3.1 For each div, console.log the value of the id attribute
+        divs.forEach(function(div) {
+            console.log(div.getAttribute("id"));
+            });
+    </script>
+</body>
+</html>
