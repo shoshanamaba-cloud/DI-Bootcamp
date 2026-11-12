@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="genres">
+        <option value="rock">Rock</option>
+        <option value="blues" selected>Blues</option>
+    </select>
+    <script>
+        let select = document.getElementById("genres")
+        
+        let classic = document.createElement("option")
+        classic.value ="classic"
+        classic.textContent = "Classic"
+        
+        select.appendChild(classic)
+        classic.selected = true;
+        
+        console.log(select.value);
+    </script>
+</body>
+</html>

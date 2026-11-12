@@ -1,0 +1,119 @@
+body {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 0;
+}
+
+#sideBar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 80px;
+    gap: 5px;
+    width: 100%;
+    height: 100vh;
+    background-color: gray;
+}
+
+#color {
+    width: 100%;
+    height: 80px;
+}
+
+.fillblock {
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+#grid {
+    grid-column: 2;
+    background-color: gray;
+    display: grid;
+	grid-template-columns: repeat(60, 1fr);
+	height: 100vh;
+	padding: 5px 5px 5px 0;
+    float: right;
+}
+
+
+
+.red1 {
+    background-color: #A94B50;
+}  
+
+.red2 {
+    background-color: #C66B70;
+}
+
+.red3 {
+    background-color: #D99A98;
+} 
+
+.pink1 {
+    background-color: #B97883;
+}
+
+.pink2 {
+    background-color: #D8A6A5;
+}
+
+.pink3 {
+    background-color: #E5BDB5;
+}
+
+.green1{
+    background-color: #59664F
+}
+
+.green2{
+    background-color: #777B57
+}
+
+.green3 {
+    background-color: #9A986C;
+}
+
+.green4{
+    background-color: #AAB08A;
+}
+
+.yellow1{
+    background-color: #C8B77B;
+} 
+
+.yellow2{
+    background-color: #E5D9B8;
+} 
+
+.blue1{
+    background-color:#52627A;
+} 
+
+.blue2{
+    background-color: #78899A;
+}
+
+.blue3 {
+    background-color: #A5B0B5;
+}
+
+.cream1 {
+    background-color: #F0E9DC;
+}
+.cream2 {
+    background-color: #D6C9B9;
+}
+
+.ochre1{
+    background-color: #A2845D;
+}
+.ochre2{
+    background-color: #C18C62;
+}
+
+.brown1{
+    background-color: #805B4D;
+}
+
+.brown2{
+    background-color: #443B3A;
+}

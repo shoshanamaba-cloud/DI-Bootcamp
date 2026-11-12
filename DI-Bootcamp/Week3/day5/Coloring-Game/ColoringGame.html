@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coloring Shoshana</title>
+    <link rel="stylesheet" href="ColoringGame.css">
+</head>
+<body>
+    <div id="sideBar"></div>
+    <div id="grid"></div>
+
+   
+    <script>
+    let mainGrid = document.getElementById("grid");
+
+    
+    for (let i = 0; i < 1440; i++) {
+        let square = document.createElement("div");
+        square.classList.add("fillblock");
+        mainGrid.appendChild(square);
+    }
+
+    let SideBar = document.getElementById("sideBar");
+
+    let colorPalette = [
+        "red1", "red2", "red3", "pink1", "pink2", "pink3",
+        "green1", "green2", "green3", "green4",
+        "yellow1", "yellow2", "blue1", "blue2", "blue3",
+        "cream1", "cream2", "ochre1", "ochre2", "brown1", "brown2"
+    ];
+
+    
+    for (let i = 0; i < colorPalette.length; i++) {
+        let color = document.createElement("div");
+        color.classList.add(colorPalette[i]);
+
+        SideBar.appendChild(color);
+
+        color.addEventListener("mousedown", selectColor);
+    }
+
+    
+    let selectedColor = "";
+
+    function selectColor(event) {
+        selectedColor = event.target.classList[0];
+    }
+
+    
+    let mouseDown = false;
+
+    mainGrid.addEventListener("mousedown", function(event) {
+        mouseDown = true;
+        fillBlock(event);
+    });
+
+    mainGrid.addEventListener("mouseover", function(event) {
+        if (mouseDown) {
+            fillBlock(event);
+        }
+    });
+
+    document.addEventListener("mouseup", function() {
+        mouseDown = false;
+    });
+
+    function fillBlock(event) {
+
+        if (event.target.classList.contains("fillblock") && selectedColor !== "") {
+            event.target.className = "fillblock " + selectedColor;
+        }
+    }
+
+    
+
+    let clearButton = document.createElement("button");
+    clearButton.textContent = "CLEAR";
+    SideBar.appendChild(clearButton);
+
+    clearButton.addEventListener("click", clearGrid);
+
+
+    function clearGrid() {
+        let squares = mainGrid.children;
+
+        for (let i = 0; i < squares.length; i++) {
+            squares[i].className = "fillblock";
+        }
+    }
+
+    </script>
+</body>
+</html>

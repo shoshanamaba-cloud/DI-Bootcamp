@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="myurl.php">
+        <input type="text" name="firstname" value="">
+        <input type="text" name="lastname" value="">
+        <input type="submit" value="Oh no">
+</form>
+
+<script>
+function checkForm(e){
+    e.preventDefault();
+    const myForm = document.querySelector("form");
+    const myObj = {};
+    for (const el of myForm.children){
+        if (el.tagName === "INPUT" && el.type === "text"){
+            myObj[el.name] = el.value;
+        }
+    }
+    console.log(myObj);
+}
+
+document.querySelector("form").addEventListener("submit", checkForm);
+</script>
+</body>
+</html>

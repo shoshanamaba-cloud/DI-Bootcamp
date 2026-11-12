@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-2</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="firstname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lastname"><br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form> 
+    <ul class="usersAnswer"></ul>
+
+    <script>
+    
+    let myForm = document.querySelector("form");
+
+    console.log(myForm);
+
+    let FirstNameInput = document.getElementById("fname");
+    let LastNameInput = document.getElementById("lname");
+
+    console.log(FirstNameInput, LastNameInput);
+
+    let firstName = document.getElementsByName("firstname");
+    let lastName = document.getElementsByName("lastname");
+
+    console.log(firstName, lastName);
+
+    let ul = document.querySelector(".usersAnswer");
+
+    myForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        if (FirstNameInput.value !== "" && LastNameInput.value !== "") {
+
+            let li1 = document.createElement("li");
+            let li2 = document.createElement("li");
+
+            li1.textContent = FirstNameInput.value;
+            li2.textContent = LastNameInput.value;
+
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+        }
+    });
+
+    
+
+
+    </script>
+</body>
+</html>

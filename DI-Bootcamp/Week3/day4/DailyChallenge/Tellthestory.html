@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Challenge: Mad Libs</title>
+ </head>
+ <body>
+
+    <h1>Mad Libs</h1>
+
+    <form id="libform">
+        <label for="noun">Noun:</label><input type="text" id="noun"><br>
+        <label for="adjective">Adjective:</label><input type="text" id="adjective"><br>
+        <label for="person">Someone's Name:</label><input type="text" id="person"><br>
+        <label for="verb">Verb:</label><input type="text" id="verb"><br>
+        <label for="place">A place:</label><input type="text" id="place"><br>
+        <button id="lib-button">Lib it!</button>
+    </form>
+
+    <p>Generated story: 
+    <span id="story"></span>
+    </p>
+
+    <script>
+    
+    let myForm = document.getElementById("libform");
+    let storyPrompt = document.querySelector("#story");
+
+    let noun;
+    let adjective;
+    let name;
+    let verb;
+    let place;
+
+    myForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let inputs = document.querySelectorAll("input");
+
+        noun = inputs[0].value;
+        adjective = inputs[1].value;
+        name = inputs[2].value;
+        verb = inputs[3].value;
+        place = inputs[4].value;
+
+        if (
+            noun.trim() === "" ||
+            adjective.trim() === "" ||
+            name.trim() === "" ||
+            verb.trim() === "" ||
+            place.trim() === ""
+        ) {
+            alert("Fill all fields correctly");
+        } else {
+            storyPrompt.textContent = `One day, ${name} discovered a ${adjective} ${noun} in ${place} and decided to ${verb} with it.`;
+        }
+    });
+
+    let shufflePrompt = document.createElement("p");
+    shufflePrompt.id = "shuffle-story";
+    storyPrompt.parentElement.after(shufflePrompt);
+
+    let shuffleButton = document.createElement("button");
+    shuffleButton.id = "shuffle-button";
+    shuffleButton.type = "button";
+    shuffleButton.textContent = "Shuffle!";
+    shufflePrompt.after(shuffleButton);
+
+    function GenerateShuffle() {
+        let stories = [
+            `One day, ${name} discovered a ${adjective} ${noun} in ${place} and decided to ${verb} with it.`,
+            `${name} went to ${place} and found a ${noun} that was incredibly ${adjective}.`,
+            `At ${place}, ${name} decided to ${verb} with a very ${adjective} ${noun}.`
+        ];
+
+        let randomIndex = Math.floor(Math.random() * stories.length);
+        shufflePrompt.textContent = stories[randomIndex];
+    }
+
+    shuffleButton.addEventListener("click", GenerateShuffle);
+
+
+    </script>
+
+ </body>
+</html>
