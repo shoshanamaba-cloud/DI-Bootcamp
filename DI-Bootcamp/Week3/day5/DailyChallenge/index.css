@@ -1,0 +1,8 @@
+.x {
+    width: 20px;
+    height: 20px
+}
+
+.completed {
+    text-decoration: line-through;
+}
