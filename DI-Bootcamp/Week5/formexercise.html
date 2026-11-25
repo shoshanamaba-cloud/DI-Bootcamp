@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="firstname" id="firstname">
+        <input type="text" name="lastname" id="lastname">
+        <input type="date" name="date" id="date">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.querySelector("form");
+        const p = document.createElement("p");
+        document.body.append(p);
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const dataObject = Object.fromEntries(formData);
+            const now = new Date();
+            const {date} = dataObject;
+            const birthday = new Date(date);
+            const difference = (now - birthday);
+            const actualDifference = Math.floor(difference/(1000*60*60*24));
+            dataObject["days"] = actualDifference;
+            dataObject["today"] = now;
+
+
+            const json = JSON.stringify(dataObject);
+            p.textContent= json;
+
+            
+
+            console.log(birthday);
+            console.log (difference);
+            console.log(actualDifference);
+            console.log("version3");
+        });
+    </script>
+</body>
+</html>

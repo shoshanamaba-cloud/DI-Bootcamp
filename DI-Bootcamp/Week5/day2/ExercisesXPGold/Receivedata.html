@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receive Data</title>
+</head>
+<body>
+
+    <section id="receivedData"></section>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const name = params.get("name");
+        const lastname = params.get("lastname");
+
+        const section = document.getElementById("receivedData");
+
+        section.textContent = `Name: ${name} | Lastname: ${lastname}`;
+    </script>
+
+</body>
+</html>
